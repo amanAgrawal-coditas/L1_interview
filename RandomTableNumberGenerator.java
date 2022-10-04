@@ -4,11 +4,10 @@ import java.util.Random;
 
 public class RandomTableNumberGenerator
 {
-    int tableNumber;
     Random random=new Random();
 
-    public int RandomTableNumberGenerator()
+    public int RandomTableNumber()
     {
-        return tableNumber=random.nextInt(30);
+        return random.nextInt(30);
     }
 }

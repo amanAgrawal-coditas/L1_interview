@@ -7,6 +7,8 @@ public class CafeBookingApplication
 {
     public static void main(String[] args)
     {
+       Menu menu=new Menu();
+       PlacingOrder placingOrder=new PlacingOrder();
 
         BufferedReader bufferedReader=new BufferedReader(new InputStreamReader(System.in));
         boolean loop=true;
@@ -16,9 +18,10 @@ public class CafeBookingApplication
             while (loop = true)
             {
                 System.out.println("Enter your choice");
-                System.out.println("Enter o to exit");
+                System.out.println("Enter 0 to exit");
                 System.out.println("Enter 1 to book a table");
-                System.out.println("Enter 2 to");
+                System.out.println("Enter 2 to display menu");
+                System.out.println("Enter 3 to take order");
                 int choice = Integer.parseInt(bufferedReader.readLine());
                 switch (choice) {
                     case 0:
@@ -33,14 +36,16 @@ public class CafeBookingApplication
                     }
                     case 2:
                     {
-                        bookATable.menuDisplay();
+                        menu.menuDisplay();
                         break;
                     }
                     case 3:
                     {
-                        bookATable.placeOrder();
+                        placingOrder.placeOrder();
+                        break;
                     }
-
+                    default:
+                        System.out.println("Enter valid choice");
                 }
 
 

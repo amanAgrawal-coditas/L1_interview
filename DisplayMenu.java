@@ -1,24 +1,25 @@
 package CafeAllocationSystem;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class DisplayMenu
 {
 
     void menu()
     {
-        HashMap<String,Integer> items=new HashMap<>();
-        items.put("Pasta "+"Serial number:001",100);
-        items.put("Noodles"+"Serial number:002",150);
-        items.put("Paneer Gravy"+"Serial number:003",250);
-        items.put("Nan"+"Serial number:004",35);
-        items.put("Ice Cream"+"Serial number:005",40);
-        items.put("Juice"+"Serial number:006",20);
-        for(Map.Entry<String,Integer> set:items.entrySet())
+        TreeMap<Integer,String> items=new TreeMap<>();
+        items.put(100,"Pasta "+"Serial number:001");
+        items.put(150,"Noodles"+"Serial number:002");
+        items.put(250,"Paneer Gravy"+"Serial number:003");
+        items.put(35,"Nan"+"Serial number:004");
+        items.put(40,"Ice Cream"+"Serial number:005");
+        items.put(20,"Juice"+"Serial number:006");
+        Set<Map.Entry<Integer,String>>menu= items.entrySet();
+        for(Map.Entry<Integer,String > entry : menu)
         {
-            System.out.println(set.getKey()+ "=" +set.getValue());
+            System.out.println( entry.getKey() + "=>" + entry.getValue() );
         }
+
 
     }
 
